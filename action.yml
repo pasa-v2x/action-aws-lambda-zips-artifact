@@ -3,11 +3,11 @@ description: 'Zip up lambdas and lamba layers and push to s3'
 inputs:
   s3-bucket:
     description: 's3 bucket to upload artifacts'
-    require: true
+    required: true
   lambda-paths:
     description: |-
       newline-separated list of relative paths for the lambdas to build and zip
     required: true
 runs:
-  using: 'node20'
+  using: 'node16'
   main: 'dist/index.js'
